@@ -1,3 +1,30 @@
+
 body{
+    width: 100%;
+    font-family: 'Dosis', sans-serif;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpQxD4zOjeq8CfHybqBau_YJ9BPoikb5vZ6A&usqp=CAU");
+    background-size: 100%;
     text-align: center;
+}
+.personal
+{
+    background-color:  #e5e3e6a1;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px 50px;
+    box-shadow: 2px 2px 2px 2px #a3c5f19c
+    
+}
+#VoteForm
+{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#VoteButton
+{
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
 }

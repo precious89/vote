@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Online Vote</h1>
+    <hr>
+    <div class="personal">
+        <label for="fname">Names:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="age">Age:</label><br>
+        <input type="text" id="age" name="age"><br><br>
+        <label for="nationality"> Nationality:
+            <select name="nationality" id='nationality'>
+                <option value="South Afican">South African</option>
+                <option value="Foreigner">Foreigner</option>
+            </select>
+
+            <br><br>
+            <h2>Select a political Party Voting:</h2>
+            <br>
+            <select name="parties" id="parties">
+                <option>ANC</option>
+                <option>DA</option>
+                <option>EFF</option>
+                <option>IFP</option>
+                <option>VF</option>
+                <option>PAC</option>
+            </select>
+
+            <br><br>
+
+            <button onclick="countVote()">Vote</button>
+
+            <br>
+
+            <hr>
+
+            <h3>Total number of vote</h3>
+            <p>ANC: <span id="ancPercent">O</span></p>
+            <p>DA: <span id="daPercent">O</span></p>
+            <p>EFF: <span id="effPercent">O</span></p>
+            <p>IFP: <span id="ifpPercent">O</span></p>
+            <p>VF: <span id="vfPercent">O</span></p>
+            <p>PAC: <span id="pacPercent">O</span></p>
+
+
+
+        </label>
+    </div>
+
+    <scrIpt>
+
+        //policital party variable
+        let anc = 0;
+        let da = 0;
+        let eff = 0;
+        let ifp = 0;
+        let vf = 0;
+        let pac = 0;
+
+        function countVote() {
+
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+            const nationality = document.getElementById("nationality").value;
+            const parties = document.getElementById("parties").value;
+
+            ancDisplay = document.getElementById("ancPercent");
+            daDisplay = document.getElementById("daPercent");
+            effDisplay = document.getElementById("effPercent");
+            ifpDisplay = document.getElementById("ifpPercent");
+            vfDisplay = document.getElementById("vfPercent");
+            pacDisplay = document.getElementById("pacPercent");
+
+            if (name == "") {
+                alert("Please enter your name");
+                return;
+            }
+
+            if (age < 17) {
+                alert("you are under, you cannot vote");
+                return;
+            }
+
+            if (nationality == "Foreigner") {
+                alert("only south africa can vote");
+                return;
+            }
+
+
+            if (parties == "parties") {
+                alert("which party won");
+                return;
+            }
+
+
+            if (parties == "ANC") {
+                anc++;
+                ancDisplay.innerHTML = anc;
+                return;
+            }
+
+            if (parties == "DA") {
+                da++;
+                daDisplay.innerHTML = da;
+                return;
+            }
+
+            if (parties == "EFF") {
+                eff++;
+                effDisplay.innerHTML = eff;
+                return;
+            }
+
+            if (parties == "IFP") {
+                ifp++;
+                ifpDisplay.innerHTML = ifp;
+                return;
+            }
+
+            if (parties == "VF") {
+                vf++;
+                vfDisplay.innerHTML = vf;
+                return;
+            }
+
+            if (parties == "PAC") {
+                pac++;
+                pacDisplay.innerHTML = pac;
+                return;
+            }
+
+
+
+            document.getElementById('anc').innerHTML = anc;
+            document.getElementById('da').innerHTML = da;
+            document.getElementById('eff').innerHTML = eff;
+            document.getElementById('ifp').innerHTML = ifp;
+            document.getElementById('vf').innerHTML = vf;
+            document.getElementById('pac').innerHTML = pac;
+
+            for (let i = 0; i < parties.length; i++) {
+                if ((parties[i].number == number)) {
+                    display.innerHTML += "parties" + parties[i].number + "parties";
+                }
+            }
+
+        }
+    </script>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
